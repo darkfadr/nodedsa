@@ -1,0 +1,26 @@
+{
+  "name": "nodedsa",
+  "version": "0.0.0",
+  "description": "Data Structures and Algorithms in JS on node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darkfadr/nodedsa.git"
+  },
+  "author": "Ashley Narcisse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darkfadr/nodedsa/issues"
+  },
+  "homepage": "https://github.com/darkfadr/nodedsa",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "gulp": "^3.8.11",
+    "gulp-mocha": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "mocha": "^2.2.1"
+  }
+}
