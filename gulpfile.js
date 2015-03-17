@@ -3,7 +3,10 @@ var gulp 		= require('gulp'),
 	mocha 		= require('gulp-mocha'),
 	jshint 		= require('gulp-jshint'),
 	notify 		= require('gulp-notify'),
-	plumber 	= require('gulp-plumber');
+	plumber 	= require('gulp-plumber'),
+	istanbul 	= require('gulp-istanbul');
+
+//TODO: npm install --save-dev gulp-istanbul-enforcer
 
 
 var paths = {
@@ -26,6 +29,7 @@ gulp.task('lint', function(){
 gulp.task('test', function(){
 	return gulp.src(paths.tests.specs)
 		.pipe(plumber())
+		.pipe(istanbul())
 		.pipe(mocha({reporter: 'spec'}))
 		.pipe(notify({message: 'Specs Completed'}));
 });
