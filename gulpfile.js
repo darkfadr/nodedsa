@@ -8,7 +8,6 @@ var gulp 		= require('gulp'),
 
 //TODO: npm install --save-dev gulp-istanbul-enforcer
 
-
 var paths = {
 	scripts: [
 		'./lib/**/*.js',
