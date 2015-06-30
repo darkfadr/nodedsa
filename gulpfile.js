@@ -42,7 +42,7 @@ gulp.task('bump', function(){
 
 gulp.task('watch', ['bump'], function(){
 	gulp.watch(paths.scripts, ['lint', 'test']);
-	gulp.watch(paths.tests.specs, ['lint', 'test']);
+	gulp.watch(paths.tests.specs, ['test']);
 });
 
 

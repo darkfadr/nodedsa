@@ -1,6 +1,6 @@
 {
   "name": "nodedsa",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "Data Structures and Algorithms in JS on node",
   "main": "index.js",
   "scripts": {
