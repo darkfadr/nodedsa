@@ -11,11 +11,10 @@ describe('List', function(){
 			list.append('second');
 			list.append('fourth');
 		    list.append('fifth');
-
 		    expect(list.length()).to.equal(4);
 
-
 			list.append('Hello');
+
 			expect(list.length()).to.equal(5);
 			expect(list.toString()[4]).to.equal('Hello');
 			done();
