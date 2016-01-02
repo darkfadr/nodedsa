@@ -9,9 +9,7 @@ var gulp 		= require('gulp'),
 //TODO: npm install --save-dev gulp-istanbul-enforcer
 
 var paths = {
-	scripts: [
-		'./lib/**/*.js',
-	],
+	scripts: ['./lib/**/*.js'],
 	tests:{
 		specs: ['./test/**/*.spec.js']
 	}
@@ -25,13 +23,20 @@ gulp.task('lint', function(){
 		.pipe(notify({message: 'JsHint Completed'}));
 });
 
-gulp.task('test', function(){
+gulp.task('test', ['bump'], function(){
 	return gulp.src(paths.tests.specs)
 		.pipe(plumber())
-		.pipe(istanbul())
 		.pipe(mocha({reporter: 'spec'}))
 		.pipe(notify({message: 'Specs Completed'}));
 });
+
+gulp.task('coverage', function(){
+	return gulp.src([paths.scripts[0], paths.tests.specs[0]])
+		.pipe(istanbul())
+		//.pipe(istanbul.hookRequire())
+		//.pipe(istanbul.enforceThreshold({thresholds: {global: 70}}))
+		.pipe(notify({message: 'Code Coverage Completed'}));
+})
 
 gulp.task('bump', function(){
 	return gulp.src('./package.json')

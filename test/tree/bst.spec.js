@@ -22,6 +22,16 @@ describe('BSTree', function(){
 		});
 	});
 
+	describe('remove()', function(){
+		it('should remove the node with the matching value', function(done){
+			
+			tree.remove(37);
+			expect(tree.length()).to.equal(6);
+			tree.traverse('inOrder').should.eql([3, 16, 22, 23, 45, 99])
+			done();
+		});
+	})
+
 	describe('getMin()', function(){
 		it('should return the node with the smallest weight', function(done){
 			expect(tree.getMin().data).to.equal(3);

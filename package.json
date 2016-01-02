@@ -1,6 +1,6 @@
 {
   "name": "nodedsa",
-  "version": "0.0.16",
+  "version": "0.0.25",
   "description": "Data Structures and Algorithms in JS on node",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,8 @@
     "gulp-plumber": "^1.0.0",
     "jshint-stylish": "^1.0.1",
     "mocha": "^2.2.1"
+  },
+  "dependencies": {
+    "istanbul": "^0.4.1"
   }
 }
