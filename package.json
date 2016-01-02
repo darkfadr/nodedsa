@@ -1,6 +1,6 @@
 {
   "name": "nodedsa",
-  "version": "0.0.11",
+  "version": "0.0.16",
   "description": "Data Structures and Algorithms in JS on node",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,6 @@
   "bugs": {
     "url": "https://github.com/darkfadr/nodedsa/issues"
   },
-  "homepage": "https://github.com/darkfadr/nodedsa",
   "devDependencies": {
     "chai": "^2.1.1",
     "gulp": "^3.8.11",
